@@ -7,6 +7,35 @@
 // Scripts
 // 
 
+function initMap() {
+    
+    const myLatLng = {lat: 44.40356184419063, lng: -79.66130351603897};
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+  
+      //Map opens with this location
+      center: { lat: 44.40356184419063, lng: -79.66130351603897 }
+    });
+  
+    new google.maps.Marker({
+      position: myLatLng,
+      map,
+      //Giving name to the main place marked
+      title: "Home",
+    });
+  
+    function addMarker(cordinates){
+      var mark = new google.maps.Marker(
+      {
+        position: cordinates,
+        map: map,
+      });
+    }
+  
+    
+  }
+  
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
